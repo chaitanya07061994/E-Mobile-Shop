@@ -21,10 +21,10 @@ public class Cart {
   	        Scanner scanner = new Scanner(System.in);
 		    String Password = scanner.nextLine();
   	    
-  	        System.out.println("Enter Product ID : ");
+  	        System.out.println("Enter ID to verify  : ");
 		    int Id = scan.nextInt();
 
-		    System.out.println("Enter Your Id To Verify :") ;
+		    System.out.println("Enter ProductId :") ;
 		    int ProductId = scan.nextInt();
 		    
 		    System.out.println("Enter Your Quantity :") ;

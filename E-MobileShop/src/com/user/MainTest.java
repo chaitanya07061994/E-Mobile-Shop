@@ -9,6 +9,8 @@ import java.sql.SQLException;
 
 import com.Admin.Admin;
 
+import Guest.Guest;
+
 
 public class MainTest {
 
@@ -25,7 +27,8 @@ public class MainTest {
 			System.out.println("Press 1 to Register. : ");
 			System.out.println("Press 2 to Login : ");
 			System.out.println("Press 3 to Login as Admin : ");
-			System.out.println("Press 4 to Exit : ");
+			System.out.println("Press 4 to Login as Guest : ");
+			System.out.println("Press 5 to Exit : ");
 			System.out.println("-------------------------");
 			int a = Integer.parseInt(bufferedReader.readLine());
 
@@ -74,24 +77,40 @@ public class MainTest {
 				String uid = bufferedReader.readLine();
 				System.out.println("Enter Password : ");
 				String pas = bufferedReader.readLine();
-				if(uid.equals("Admin") && pas.equals("Admin")) {
+				if(uid.equals("Admin") && pas.equals("Admin")) 
 					System.out.println("Login Successfull...");
 					System.out.println("Welcome Admin!!");
+				
+				
+					Admin admin = new Admin();
+					admin.adminMenu();
+				
 				}
-				else {
-					System.out.println("Invalid Username or Password..");
+				
+				if (a == 4) {
+					System.out.println("Guest Login..");
+					 
+					
+					Guest guest = new Guest();
+					guest.ViewAsGuest() ;
+				
+				}
+				
+				if (a == 5) {
+					
+					// exit
 					break;
+				} 
+				else {
+					
 				}
-				Admin admin = new Admin();
-				admin.adminMenu();
+				
+				
+				
+				
 			}
 		
-		
-		
-		
-		
-		
-		
-		}
+		System.out.println("Thank You For Visiting Us....");
+          }
 	}
-}
+
