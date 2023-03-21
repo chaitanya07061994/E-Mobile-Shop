@@ -8,8 +8,7 @@ import java.io.InputStreamReader;
 import java.sql.SQLException;
 
 import com.Admin.Admin;
-
-import Guest.Guest;
+import com.Guest.Guest;
 
 
 public class MainTest {
